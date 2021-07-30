@@ -56,10 +56,18 @@
    <item>
     <layout class="QHBoxLayout" name="list_layout">
      <item>
-      <widget class="QListWidget" name="available_aovs_list"/>
+      <widget class="QListWidget" name="available_aovs_list">
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QListWidget" name="active_aovs_list"/>
+      <widget class="QListWidget" name="active_aovs_list">
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
