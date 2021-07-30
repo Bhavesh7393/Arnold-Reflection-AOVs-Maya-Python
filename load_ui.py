@@ -2,15 +2,14 @@
 
 load_ui.py
 
-This file is linked with 7 files, which are located inside "data" folder.
+This file is linked with 6 files, which are located inside "data" folder.
 Python 3 files: arnold_refl_aovs_functions_py3.py, arnold_refl_aovs_main_py3.py
 Python 2 files: arnold_refl_aovs_functions_py2.py, arnold_refl_aovs_main_py2.py
 aovs list file: arnold_refl_aovs_list.txt
 Qt Designer ui file: arnold_refl_aovs_ui.ui
-pyside2-uic converted py file: arnold_refl_aovs_ui.py
 
-Replace "path" with your local directory till "arnold_reflection_aovs" folder.
-Execute the script in Maya-Python Script Editor.
+Replace "path" with your local directory folder.
+Execute the script in Maya-Python Script Editor, or save it in Maya Shelf.
 
 Tested on:
 Maya [2018-2020] Python 2
@@ -29,7 +28,7 @@ Features:
    refl_object_emission: Shader Emission in Reflection
 5. refl_RGBA_default Reflection Light Group is provided by default.
    any additional Light Groups will automatically appear in the list
-   as refl_lightgroup AOVs.
+   as refl_lightgroup.
 
 Limitation:
 1. If you add refl_lightgroup AOV in the scene and later delete the light
