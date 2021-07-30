@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>main_layout</class>
- <widget class="QDialog" name="main_layout">
+ <widget class="QWidget" name="main_layout">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>412</width>
     <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Arnold Reflection AOVs</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
     <number>2</number>
    </property>
    <property name="leftMargin">
-    <number>8</number>
+    <number>0</number>
    </property>
    <property name="topMargin">
-    <number>8</number>
+    <number>0</number>
    </property>
    <property name="rightMargin">
-    <number>8</number>
+    <number>0</number>
    </property>
    <property name="bottomMargin">
-    <number>8</number>
+    <number>0</number>
    </property>
    <item>
     <layout class="QHBoxLayout" name="label_layout">
@@ -56,18 +56,10 @@
    <item>
     <layout class="QHBoxLayout" name="list_layout">
      <item>
-      <widget class="QListWidget" name="available_aovs_list">
-       <property name="selectionMode">
-        <enum>QAbstractItemView::ExtendedSelection</enum>
-       </property>
-      </widget>
+      <widget class="QListWidget" name="available_aovs_list"/>
      </item>
      <item>
-      <widget class="QListWidget" name="active_aovs_list">
-       <property name="selectionMode">
-        <enum>QAbstractItemView::ExtendedSelection</enum>
-       </property>
-      </widget>
+      <widget class="QListWidget" name="active_aovs_list"/>
      </item>
     </layout>
    </item>

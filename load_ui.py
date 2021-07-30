@@ -49,12 +49,12 @@ bhaveshbudhkar@yahoo.com
 
 import sys
 
-path = r"/path/arnold_reflection_aovs"
+path = r"C:\Users\bhave\PycharmProjects\arnold_reflection_aovs"
 
 if path not in sys.path:
     sys.path.append(path)
 
-if sys.version[0] == str(3):
+if sys.version[0] == "3":
     from data.arnold_refl_aovs_main_py3 import ReflectionAOV
 else:
     from data.arnold_refl_aovs_main_py2 import ReflectionAOV

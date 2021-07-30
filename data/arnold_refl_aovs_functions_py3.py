@@ -144,7 +144,7 @@ def all_light_groups(REFLECTION_AOVS_LIST):
 
     for light_group in light_group_list:
         if light_group not in REFLECTION_AOVS_LIST:
-            REFLECTION_AOVS_LIST.append(["reflection_RGBA_" + light_group, "C<RS>.*<L.'" + light_group + "'>"])
+            REFLECTION_AOVS_LIST.append(["refl_RGBA_" + light_group, "C<RS>.*<L.'" + light_group + "'>"])
 
 def available_aov_list(ui, REFLECTION_AOVS_LIST):
     '''

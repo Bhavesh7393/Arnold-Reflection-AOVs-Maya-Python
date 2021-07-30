@@ -9,12 +9,13 @@ Main Window loading and Signals and Slots for UI building.
 
 '''
 
-from PySide2 import QtCore, QtWidgets
+import os
+
+from PySide2 import QtCore, QtWidgets, QtUiTools
 from shiboken2 import wrapInstance
 import maya.OpenMayaUI as omui
 
 import data.arnold_refl_aovs_functions_py3 as func
-import data.arnold_refl_aovs_ui as window
 
 def maya_main_window():
     '''
@@ -28,31 +29,45 @@ class ReflectionAOV(QtWidgets.QDialog):
     '''
     Reflection AOV main UI and functions.
     '''
-    def __init__(self):
+    def __init__(self, ui_path=None, parent=maya_main_window()):
         '''
         Initializing Cunstructor
         '''
-        super().__init__(maya_main_window())
+        super().__init__(parent)
 
         self.setWindowTitle("Arnold Reflection AOVs")
-        self.setFixedWidth(412)
+        self.resize(412, 300)
         self.setWindowFlags(self.windowFlags() ^ QtCore.Qt.WindowContextHelpButtonHint)
 
+        self.init_ui(ui_path)
+        self.create_layout()
         self.aovs_list()
         self.arnold_default_check()
         self.all_light_groups()
-        self.init_ui()
         self.available_aov_list()
         self.active_aov_list()
         self.create_connections()
 
-    def init_ui(self):
+    def init_ui(self, ui_path):
         '''
         py ui file load
         :return: None
         '''
-        self.ui = window.Ui_main_layout()
-        self.ui.setupUi(self)
+        if not ui_path:
+            ui_path = f"{os.path.dirname(__file__)}/arnold_refl_aovs_ui.ui"
+
+        file = QtCore.QFile(ui_path)
+        file.open(QtCore.QFile.ReadOnly)
+
+        loader = QtUiTools.QUiLoader()
+        self.ui = loader.load(file)
+
+        file.close()
+
+    def create_layout(self):
+        main_layout = QtWidgets.QVBoxLayout(self)
+        main_layout.setContentsMargins(6, 6, 6, 6)
+        main_layout.addWidget(self.ui)
 
     def create_connections(self):
         '''
