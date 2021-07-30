@@ -49,7 +49,7 @@ bhaveshbudhkar@yahoo.com
 
 import sys
 
-path = r"C:\Users\bhave\PycharmProjects\arnold_reflection_aovs"
+path = r"path/arnold_reflection_aovs"
 
 if path not in sys.path:
     sys.path.append(path)
