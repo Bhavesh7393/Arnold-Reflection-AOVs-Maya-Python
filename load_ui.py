@@ -8,12 +8,17 @@ Python 2 files: arnold_refl_aovs_functions_py2.py, arnold_refl_aovs_main_py2.py
 aovs list file: arnold_refl_aovs_list.txt
 Qt Designer ui file: arnold_refl_aovs_ui.ui
 
-Replace "path" with your local directory folder.
+Replace path variable with you local directory folder inside "".
 Execute the script in Maya-Python Script Editor, or save it in Maya Shelf.
 
+Software Requirement:
+Maya [2018-2022]
+Arnold 5.0+
+Python 2 or 3 (depending on Maya Version)
+
 Tested on:
-Maya [2018-2020] Python 2
-Maya 2022 Python 2 and Python 3
+Windows, Maya [2018-2020] Python 2
+Windows, Maya 2022 Python 2 and Python 3
 
 Features:
 1. Exact same UI and functionality as Arnold AOV Browser in Maya Render Settings.
@@ -34,7 +39,7 @@ Limitation:
 1. If you add refl_lightgroup AOV in the scene and later delete the light
    associated with that Light Group, relaunching UI will automatically
    remove the name of the AOV from the list, but Light Group AOV won't
-   be removed and you will have to manually delete the AOV.
+   be removed from your scene and you will have to manually delete it.
 2. Any new Reflection Light Group AOV will append in the list at the bottom,
    you will have to relaunch the UI for list to refresh.
 
