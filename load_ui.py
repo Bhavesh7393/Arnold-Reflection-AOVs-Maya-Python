@@ -8,9 +8,6 @@ Python 2 files: arnold_refl_aovs_functions_py2.py, arnold_refl_aovs_main_py2.py
 aovs list file: arnold_refl_aovs_list.txt
 Qt Designer ui file: arnold_refl_aovs_ui.ui
 
-Replace path variable with your local directory folder inside "".
-Execute the script in Maya-Python Script Editor, or save it in Maya Shelf.
-
 Software Requirement:
 Maya [2018-2022]
 Arnold 5.0+
@@ -44,6 +41,11 @@ Limitation:
    you will have to relaunch the UI for the list to refresh.
 
 Document: https://bhavesh7393.artstation.com/pages/reflection-aovs
+
+Instructions:
+1. Copy/Paste load_ui.py content to Maya Script Editor.
+2. Replace path variable with the folder path of the script from your computer.
+3. Execute the script in Maya-Python Script Editor, or save it in Maya Shelf.
 
 Author:
 Bhavesh Budhkar
