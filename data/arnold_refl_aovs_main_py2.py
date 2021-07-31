@@ -35,7 +35,7 @@ class ReflectionAOV(QtWidgets.QDialog):
         '''
         super(ReflectionAOV, self).__init__(parent)
 
-        self.setWindowTitle("Arnold Reflection AOVs")
+        self.setWindowTitle("Arnold Reflection AOVs 1.0")
         self.resize(412, 300)
         self.setWindowFlags(self.windowFlags() ^ QtCore.Qt.WindowContextHelpButtonHint)
 
