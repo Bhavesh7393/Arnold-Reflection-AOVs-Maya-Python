@@ -8,7 +8,7 @@ Python 2 files: arnold_refl_aovs_functions_py2.py, arnold_refl_aovs_main_py2.py
 aovs list file: arnold_refl_aovs_list.txt
 Qt Designer ui file: arnold_refl_aovs_ui.ui
 
-Replace path variable with you local directory folder inside "".
+Replace path variable with your local directory folder inside "".
 Execute the script in Maya-Python Script Editor, or save it in Maya Shelf.
 
 Software Requirement:
@@ -28,7 +28,7 @@ Features:
    specular_only AOV only extracts aiStandardSurface Specular,
    and hair AOV only extracts aiStandardHair Specular
 3. All possible Beauty AOVs have their Reflection AOVs.
-4. Emission have 2 additional Reflection AOVs:
+4. Emission has 2 additional Reflection AOVs:
    refl_light_emission: Light Emission in Reflection
    refl_object_emission: Shader Emission in Reflection
 5. refl_RGBA_default Reflection Light Group is provided by default.
@@ -41,7 +41,7 @@ Limitation:
    remove the name of the AOV from the list, but Light Group AOV won't
    be removed from your scene and you will have to manually delete it.
 2. Any new Reflection Light Group AOV will append in the list at the bottom,
-   you will have to relaunch the UI for list to refresh.
+   you will have to relaunch the UI for the list to refresh.
 
 Document: https://bhavesh7393.artstation.com/pages/reflection-aovs
 
